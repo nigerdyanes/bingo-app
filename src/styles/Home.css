@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.ficha_seleccionada {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.actions {
+    
+}
+
+.actions button {
+  margin-left: 10px;
+}

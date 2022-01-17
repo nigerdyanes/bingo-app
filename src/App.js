@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "bootswatch/dist/morph/bootstrap.min.css";
+import Home from "./pages/Home";
+
+import "./styles/App.css"
+
+const initialState = {
+  numeroInicial: 1,
+  numeroFinal: 60,
+  fichaActual: 10,
+  letraActual: "B",
+  fichasSelecionadas: [],
+  tipoDiscado:'A',
+  precioCarton: 200,
+  jugadores: []
+}
 
 function App() {
+
+  const [ state, setState ] = useState( initialState )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Home state={state} setState={setState} />
     </div>
   );
 }
